@@ -1,6 +1,8 @@
 import math
-import ballinbox as bb
-import validate as val
+import time
+import ball_in_box
+import ball_in_box.ballinbox as bb
+import ball_in_box.validate as val
 
 def area_sum(circles):
     area = 0.0
@@ -11,8 +13,10 @@ def area_sum(circles):
 
 if __name__ == '__main__':
     
-    num_of_circle = 99
-    blockers = [(1.0, 1.0), (1.0, -1.0), (-1.0, 1.0), (-1.0, -1.0)]
+    rec = time.clock()
+    
+    num_of_circle = 5
+    blockers = [(0.8, 0.8), (0.8, -0.8), (-0.8, 0.8), (-0.8, -0.8)]
     
     circles = bb.ball_in_box(num_of_circle, blockers)
 
@@ -21,6 +25,8 @@ if __name__ == '__main__':
         print("Total area: {}".format(area))
     else:
         print("Error: no good circles.")
+    
+
 
 
 
