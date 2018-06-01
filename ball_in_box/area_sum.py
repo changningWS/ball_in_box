@@ -19,10 +19,11 @@ if __name__ == '__main__':
     blockers = [(0.8, 0.8), (0.8, -0.8), (-0.8, 0.8), (-0.8, -0.8)]
     
     circles = bb.ball_in_box(num_of_circle, blockers)
-
+	
     if num_of_circle == len(circles) and val.validate(circles, blockers):
         area = area_sum(circles)
         print("Total area: {}".format(area))
+        print("circles: {}".format(circles))
     else:
         print("Error: no good circles.")
     
